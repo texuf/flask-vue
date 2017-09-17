@@ -45,7 +45,14 @@ I'm using [pipenv](http://docs.pipenv.org/) for my python dependencies.
 
 ## Deploying to heroku
 1) install the heroku cli: https://devcenter.heroku.com/articles/getting-started-with-python
-    $ echo web: gunicorn server.app:app > Procfile
+    $ cd flask-vue/server
+    $ pipenv install gunicorn
+    $ echo web: gunicorn app:app > Procfile
+    $ cd ../
+    $ git add -A && git commit -m "Added Procfile and Gunicorn"
+    $ heroku create
+    $ git subtree push --prefix server heroku master
+    $ heroku logs --tail
 
 ### Tips
 - Try a `hard refresh` if you're not seeing your js files update when you change them. _[link](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)_
