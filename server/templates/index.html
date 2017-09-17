@@ -9,16 +9,27 @@
   
 </head>
 <body>
+
+  <h3> Flask Templating </h3>
   <div>
     <p>Welcome to the jinja n vue example application. Your ip address is ${ flask_template_var }$</p>
   </div>
 
+  <h3> Declaritive Rendering </h3>
   <div id="app">
     <p>{{ message }}</p>
   </div>
 
+  <div id="app-2">
+    <span v-bind:title="message">
+      Hover your mouse over me for a few seconds
+      to see my dynamically bound title!
+    </span>
+  </div>
+
+  <h3>Conditionals and Loops</h3>
   <div id="app-3">
-    <p v-if="seen">Now you see me</p>
+    <p v-if="seen"><button v-on:click="hideMessage">Now you see me</button></p>
   </div>
 
   <div id="app-4">
@@ -27,8 +38,10 @@
         {{ todo.text }}
       </li>
     </ol>
+    <button v-on:click="newItem">New Item</button>
   </div>
 
+  <h3>Handling User Input</h3>
   <div id="app-5">
     <p>{{ message }}</p>
     <button v-on:click="reverseMessage">Reverse Message</button>
@@ -39,6 +52,7 @@
     <input v-model="message">
   </div>
 
+  <h3>Composing with Components</h3>
   <div id="app-7">
     <ol>
         <!--

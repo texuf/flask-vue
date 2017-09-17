@@ -6,10 +6,22 @@ var app = new Vue({
   }
 })
 
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: 'You loaded this page on ' + new Date().toLocaleString()
+  }
+})
+
 var app3 = new Vue({
   el: '#app-3',
   data: {
-    seen: false
+    seen: true
+  },
+  methods: {
+    hideMessage: function () {
+      this.seen = !this.seen
+    }
   }
 })
 
@@ -21,6 +33,11 @@ var app4 = new Vue({
       { text: 'Learn Vue' },
       { text: 'Build something awesome' }
     ]
+  },
+  methods: {
+    newItem: function () {
+      this.todos.push({ text: 'New item' })
+    }
   }
 })
 
