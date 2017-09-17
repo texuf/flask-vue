@@ -23,6 +23,8 @@ I'm using [pipenv](http://docs.pipenv.org/) for my python dependencies.
 ## Run Server
     $ cd flask-vue/server
     $ pipenv run python app.py 
+    ...
+    $ open http://127.0.0.1:5000/
 
 ## Work on Client
     $ # in a second terminal window
