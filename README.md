@@ -37,6 +37,12 @@ I'm using [pipenv](http://docs.pipenv.org/) for my python dependencies.
 - [flask](http://flask.pocoo.org/)
 - [vue](https://vuejs.org/v2/guide/)
 
+## Other flask/vue apps
+- https://github.com/lh00000000/vue-flask-template
+- https://github.com/JulienBalestra/vue-flask
+- https://github.com/ioiogoo/Vue-News-Board
+- https://github.com/taogeT/flask-vue
+
 ### Tips
 - Try a `hard refresh` if you're not seeing your js files update when you change them. _[link](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)_
    - Windows: Ctrl+F5
