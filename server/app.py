@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, render_template, request
+import logging
 
 # in order for view and flask to play nice, we need new tokens 
 class CustomFlask(Flask):
@@ -14,6 +15,15 @@ class CustomFlask(Flask):
 
 # create globals
 app = CustomFlask("Flask-Vue")
+
+
+#add logging
+log_handler = logging.StreamHandler()
+log_handler.setFormatter(logging.Formatter(
+    '%(asctime)s %(levelname)s: %(message)s '
+    '[in %(pathname)s:%(lineno)d]'))
+app.logger.addHandler(log_handler)
+app.logger.setLevel(logging.DEBUG)
 
 # index
 @app.route('/')
