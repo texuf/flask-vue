@@ -44,7 +44,8 @@ I'm using [pipenv](http://docs.pipenv.org/) for my python dependencies.
 - https://github.com/taogeT/flask-vue
 
 ## Deploying to heroku
-1) install the heroku cli: https://devcenter.heroku.com/articles/getting-started-with-python
+Install the heroku cli: https://devcenter.heroku.com/articles/getting-started-with-python
+
     $ cd flask-vue/server
     $ pipenv install gunicorn
     $ echo web: gunicorn app:app > Procfile
