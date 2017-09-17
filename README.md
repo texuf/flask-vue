@@ -5,7 +5,7 @@ Flask and Vue playing happily together
 ## Inspiration
 Flask and Vue use similar templating, making them incompatible out of the box. In this example I have modified the default flask template tokens and built a flask application that serves a vue frontend.
 
-The server returns `index.html` which blends jinja and vue templates. `app.js` modifies the vue templates and fetches and displays data from `api/data/kazam`
+The server returns `index.html` which blends jinja and vue templates. `app.js` modifies the vue templates and fetches and displays data from `api/data/<parameter>`
 
 ## Prerequisites
 I'm using [pipenv](http://docs.pipenv.org/) for my python dependencies.
