@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 
 # in order for view and flask to play nice, we need new tokens 
 class CustomFlask(Flask):
@@ -20,7 +20,7 @@ app = CustomFlask("Flask-Vue")
 def index():
     return render_template(
         'index.html', 
-        flask_template_var='Welcome to the jinja n vue example application.'
+        flask_template_var='{}'.format(request.remote_addr)
     )
 
 # an api route
