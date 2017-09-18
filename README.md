@@ -37,6 +37,7 @@ I'm using [pipenv](http://docs.pipenv.org/) for my python dependencies.
 - [flask](http://flask.pocoo.org/)
 - [vue](https://vuejs.org/v2/guide/)
 - [flask on heroku](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud)
+- [flask and view together](https://www.reddit.com/r/flask/comments/6kuhjk/flask_api_backend_vuejs_frontend/)
 
 ## Other flask/vue apps
 - https://github.com/lh00000000/vue-flask-template
