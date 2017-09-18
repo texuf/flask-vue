@@ -55,7 +55,10 @@ Install the heroku cli: https://devcenter.heroku.com/articles/getting-started-wi
     $ git subtree push --prefix server heroku master
     $ heroku logs --tail
 
+
+
 ### Tips
+- [Aggregate, tail, and search your logs (free sign up)](https://papertrailapp.com/?thank=09267f)
 - Try a `hard refresh` if you're not seeing your js files update when you change them. _[link](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)_
    - Windows: Ctrl+F5
    - Mac: Cmd+Shift+R   
