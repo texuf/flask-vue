@@ -1,21 +1,18 @@
 from flask import Flask, jsonify, render_template, request
 import logging
 
-# in order for view and flask to play nice, we need new tokens 
-class CustomFlask(Flask):
-    jinja_options = Flask.jinja_options.copy()
-    jinja_options.update(dict(
-        block_start_string='$%', # was {%
-        block_end_string='%$', # was %}
-        variable_start_string='${', # was {{
-        variable_end_string='}$', # was }}
-        comment_start_string='$#', # was {#
-        comment_end_string='#$', # was #}
-    ))
-
 # create globals
-app = CustomFlask("Flask-Vue")
-
+app = Flask(__name__)
+jinja_options = app.jinja_options.copy()
+jinja_options.update(dict(
+    block_start_string='$%', # was {%
+    block_end_string='%$', # was %}
+    variable_start_string='${', # was {{
+    variable_end_string='}$', # was }}
+    comment_start_string='$#', # was {#
+    comment_end_string='#$', # was #}
+))
+app.jinja_options = jinja_options
 
 #add logging
 log_handler = logging.StreamHandler()
